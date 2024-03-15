@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+
+        .Container {
+            margin: 5px;
+            display: grid;
+            /* background-color: #333; */
+            gap: 5px;
+        }
+
+        .Container div {
+            background-color: #CCC;
+            padding: 20px;
+            /* border: 5px solid blue */
+        }
+
+        @media (min-width: 300px) {
+            .Container {
+                grid-template-areas:
+                    'red red'
+                    'blue blue'
+                    'green pink'
+            }
+
+            #red {
+                grid-area: red;
+                background-color: red;
+                position: fixed;
+                top: 5px;
+                left: 0px;
+                width: 100%;
+            }
+
+            #blue {
+                grid-area: blue;
+                background-color: blue;
+                height: 90vh;
+                margin-top: 8.7vh;
+            }
+
+            #green {
+                grid-area: green;
+                background-color: green;
+                height: 60vh;
+            }
+
+            #pink {
+                grid-area: pink;
+                background-color: pink;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .Container {
+                grid-template-areas:
+                    'red red red'
+                    'green blue blue'
+                    'pink pink pink'
+            }
+
+            #blue {
+                margin-top: 0;
+            }
+
+            #red {
+                position: static;
+                width: auto;
+            }
+
+            #green {
+                height: 90vh;
+            }
+
+            #pink {
+                height: 15vh;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .Container {
+                grid-template-areas:
+                    'red red red red red'
+                    'green blue blue blue pink'
+            }
+
+            #pink {
+                height: 90vh;
+            }
+
+
+           
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="Container">
+        <div id="red">
+            <p>Vermelho</p>
+        </div>
+
+        <div id="green">
+            <p>Verde</p>
+        </div>
+
+        <div id="blue">
+            <p>Azul</p>
+        </div>
+
+        <div id="pink">
+            <p>Rosa</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

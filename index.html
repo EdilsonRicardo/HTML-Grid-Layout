@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .Container{
+            background-color: #333;
+            border: 2px solid red;
+            padding: 15px;
+            display: grid;
+            height: 35vh;
+            /* INSERCAO DE 3 COLUNAS*/
+            
+            grid-template-columns: 50px auto 10% ;
+
+            /*ALTERACAO DE TAMANHO (ALTURA) DAS LINHAS*/
+            grid-template-rows: repeat(2, 50%);
+
+            /* ESPACAMENTO ENTRE AS LINHAS */
+            gap: 5px;
+
+            /*   ESPACAMENTO ENTRE LINHAS*/
+            /* row-gap: 10px; */
+            /*   ESPACAMENTO ENTRE COLUNAS*/
+            /* column-gap: 15px; */
+
+            /*Nr de Colunas*/
+            /* grid-template-columns: auto auto auto;  */
+            
+            /*Nr de Linhas*/
+            /* grid-template-rows: repeat(4, 75px); */
+        }
+
+        .Container div{
+            background-color: #CCC;
+            padding: 20px;
+            border: 1px solid blue
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="Container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    
+</body>
+</html>

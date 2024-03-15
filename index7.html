@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+
+
+        .Container {
+            margin: 5px;
+            /* background-color: green; */
+            display: grid;
+            gap: 10px;
+            font-size: 2em;
+            color: white;
+        }
+
+        .Container div {
+            background-color: red;
+            padding: 20px;
+            /* border: 5px solid blue; */
+        }
+
+        ul {
+            list-style: none;
+            background-color: #343538;
+           
+        }
+
+
+
+        /* Alteracao de caracteristicas da checkbox */
+        #check {
+            display: none;
+        }
+
+        @media (max-width: 500px) {
+            ul {
+                list-style: none;
+                background-color: #343538;
+                height: 100vh;
+                position: fixed;
+                top: 150px;
+                right: -100%;
+                width: 100%;
+                transition: all 0.5s;
+            }
+
+            #check:checked~ul {
+                /* Comando para mostrar o menu */
+                right: 0;
+            }
+
+            #corpo{
+                height: 80vh;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .Container {
+                grid-template-areas:
+                    'logo menu menu menu menu'
+                    'corpo corpo corpo corpo corpo'
+            }
+
+            label{
+                display: none;
+            }
+
+            #logo {
+                grid-area: logo;
+                background-color: rgb(27, 12, 127);
+            }
+
+            #menu {
+                grid-area: menu;
+                background-color: rgb(85, 167, 243);
+            }
+
+            #corpo {
+                grid-area: corpo;
+                height: 80vh;
+                background-color: blue;
+            }
+
+            ul li {
+                text-decoration: none;
+                float: left;
+                margin: 0 5px;
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="Container">
+        <div id="logo">
+            <p>LOGO</p>
+        </div>
+
+        <div id="menu">
+
+            <!-- Criacao de checkbox -->
+            <input type="checkbox" id="check">
+            <!-- Associacao da checkbox com um unicode (padrao que permite ao diversos dispositivos exibir caracteres, emojis etc) 'unicode.org/charts'-->
+            <label for="check">&#x268C; <p>MENU</p></label>
+            <ul>
+
+                <li>MENU 1</li>
+
+
+                <li>MENU 2</li>
+
+
+                <li>MENU 3</li>
+
+
+                <li>MENU 4</li>
+
+            </ul>
+        </div>
+
+        <div id="corpo">
+            <p>CORPO</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .Container{
+            background-color: #333;
+            border: 3px solid red;
+            padding: 15px;
+            display: grid;
+            /* ESPACAMENTO ENTRE AS LINHAS */
+            gap: 5px; 
+
+            grid-template-areas: 
+            'header header header header ' 
+            'sidebar content content content '
+            'footer footer footer footer '
+        }
+        
+
+        #header{
+            grid-area: header;
+            height: 10vh;
+        }
+        
+        #sidebar{
+            height: 65vh;
+            grid-area: sidebar;
+        }
+        
+        #content{
+            grid-area: content;
+        }
+        
+        #footer{
+            height: 5vh;
+            grid-area: footer;
+        }
+
+        .Container div{
+            background-color: #CCC;
+            padding: 20px;
+            border: 1px solid blue
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Dividir o site em areas especificas -->
+    <div class="Container" id="template-areas">
+        <div id="header">
+            <p>Cabeçalho</p>
+        </div>
+
+        <div id="sidebar">
+            <p>
+                Sidebar
+            </p>
+        </div>
+
+        <div id="content">
+            <p>
+                Conteudo
+            </p>
+        </div>
+
+        <div id="footer">
+            <p>
+                Rodapé
+            </p>
+        </div>
+
+    </div>
+    
+</body>
+</html>
